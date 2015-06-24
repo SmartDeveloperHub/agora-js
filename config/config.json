@@ -17,7 +17,9 @@
   "AGORA_SEARCHTREE": "http://agora.org#SearchTree",
   "AGORA_ONPROPERTY": "http://agora.org#onProperty",
   "AGORA_BYPATTERN": "http://agora.org#byPattern",
+  "AGORA_DEFINEDBY": "http://agora.org#definedBy",
   "AGORA_OBJECT": "http://agora.org#object",
+  "AGORA_HASSEED": "http://agora.org#hasSeed",
   "AGORA_PREDICATE": "http://agora.org#predicate",
   "AGORA_SUBJECT": "http://agora.org#subject",
   "AGORA_TRIPATTERN": "http://agora.org#TriplePattern",
@@ -27,5 +29,6 @@
   "AGORA_LITERAL": "http://agora.org#Literal",
   "AGORA_FROMTYPE": "http://agora.org#fromType",
   "AGORA_LENGTH": "http://agora.org#length",
-  "AGORA_VALUE": "http://agora.org#Value"
+  "AGORA_VALUE": "http://agora.org#Value",
+  "RDF_TYPE": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
 }

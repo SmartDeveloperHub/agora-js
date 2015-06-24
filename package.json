@@ -13,6 +13,7 @@
   "license": "Apache version 2.0",
   "main": "lib/agora.js",
   "dependencies": {
+    "sync-request": "2.0.1",
     "n3": "0.4.3",
     "browserify": "10.2.4",
     "sparqljs": "1.1.1"
