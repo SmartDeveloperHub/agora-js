@@ -22,9 +22,15 @@
     #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=#
 */
 
-// Configuration of Agora
-GLOBAL.config = require("../config/config.json");
+ var agora = require("./lib/agora")
 
-// Expose modules
-module.exports.plan = require('./agora_planner');
-module.exports.frag = require('./agora_fragment');
+ console.log(" * Agora Client: v1.0 Test: ");
+ console.log(" - Started at " + new Date());
+ var gplan = agora.plan.get_plan('{?s a scm:Repository.}');
+ if (gplan.status === 'ERROR') {
+    console.log(" - [" + gplan.status + "] Check configuration file or connection");
+ }
+ else {
+    console.log(" - Plan given:");
+ }
+ console.log(" - Finished at " + new Date());
