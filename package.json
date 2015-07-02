@@ -1,9 +1,11 @@
 {
   "name": "agora-js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An Agora client for JavaScript that requests and executes search plans for graph patterns.",
   "author": "Alejandro F. Carrera <alejandro.fernandez.carrera@centeropenmiddleware.com>",
-  "contributors": [],
+  "contributors": [
+    "Carlos Blanco <carlos.blanco@centeropenmiddleware.com>"
+  ],
   "keywords": [
     "agora",
     "rdf",
@@ -16,7 +18,7 @@
     "sync-request": "2.0.1",
     "n3": "0.4.3",
     "browserify": "10.2.4",
-    "sparqljs": "1.1.1"
+    "sparqljs": "1.1.2"
   },
   "scripts": {
     "start": "node index.js"
