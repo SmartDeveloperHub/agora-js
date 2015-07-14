@@ -20,15 +20,24 @@
     #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=#
 */
 
- var agora = require("./lib/agora")
+ var agora = require("./lib/agora");
 
  console.log(" * Agora Client: v1.0 Test: ");
  console.log(" - Started at " + new Date());
- var gplan = agora.plan.get_plan('{?s a scm:Repository.}');
- if (gplan.status === 'ERROR') {
-    console.log(" - [" + gplan.status + "] Check configuration file or connection");
- }
- else {
-    console.log(" - Plan given:");
- }
- console.log(" - Finished at " + new Date());
+ console.log(" * Agora Planner: ");
+ var gp = '{?s a scm:Repository.}';
+ agora.plan.get_plan(gp, function(e){
+    if (e.status === "OK") {
+        console.log(" - Status: OK for " + gp);
+        console.log(" * Agora Fragment: ");
+        agora.frag.get_fragment(e.graph, function(r){
+            console.log(" * Agora Graph: " + e.status);
+            console.log(JSON.stringify(r));
+        }, function(e){
+            console.log(" Yield: " + e);
+        });
+    }
+    else {
+        console.log(" - Status: ERROR (" + e.component + ")");
+    }
+ });
